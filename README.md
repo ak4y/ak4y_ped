@@ -1,6 +1,6 @@
 # ak4y_ped
 
-# esx_skin > client > main.lua
+- esx_skin > client > main.lua
 ```
 RegisterNetEvent('esx_skin:karakterYukle')
 AddEventHandler('esx_skin:karakterYukle', function()
