@@ -7,7 +7,6 @@ AddEventHandler('esx_skin:karakterYukle', function()
 	ESX.TriggerServerCallback('esx_skin:getPlayerSkin', function(skin, jobSkin)
 		if skin ~= nil then
 			TriggerEvent('skinchanger:loadSkin', skin)
-
 		end
 	end)
 end)
