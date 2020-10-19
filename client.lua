@@ -7,13 +7,11 @@ Citizen.CreateThread(function()
 	end
 end)
 
-local cd = 120 -- Oyuna girişte pedfix kullanılması için verilen süre.
+local cd = false -- Oyuna girişte pedfix kullanılması için verilen süre.
 AddEventHandler('playerSpawned', function(spawn)
 	TriggerServerEvent("ak4y:checkPed")
-	while cd > 0 do
-		cd = cd - 1
-		Citizen.Wait(1000)
-	end
+	Citizen.Wait(2*60000)
+	cd=true
 end)
 
 RegisterNetEvent("ak4y:pedYukle")
@@ -43,7 +41,7 @@ AddEventHandler("ak4y:yeniPed", function(model)
 end)
 
 RegisterCommand("pedfix", function()
-	if cd == 0 then
+	if cd then
 		ESX.ShowNotification("Bu kodu yalnızca oyuna girdiğin ilk 2 dakika kullanabilirsin.")
 	else
 		TriggerServerEvent("ak4y:checkPed")
