@@ -10,10 +10,8 @@ end)
 
 AddEventHandler('playerSpawned', function(spawn)
 	TriggerServerEvent("ak4y:checkPed")
-	while cd do
 		Citizen.Wait(2*60000)
 		cd=true
-	end
 end)
 
 RegisterNetEvent("ak4y:loadPed")
