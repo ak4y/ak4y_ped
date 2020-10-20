@@ -1,5 +1,5 @@
 ESX = nil
-local cd = true
+local cd = false
 
 Citizen.CreateThread(function()
 	while ESX == nil do
@@ -12,7 +12,7 @@ AddEventHandler('playerSpawned', function(spawn)
 	TriggerServerEvent("ak4y:checkPed")
 	while cd do
 		Citizen.Wait(2*60000)
-		cd=false
+		cd=true
 	end
 end)
 
