@@ -23,7 +23,7 @@ AddEventHandler('playerSpawned', function()
 	end)
 end)
 ```
-*2* Aşağıdaki kodu clientin içine yapıştırın
+*2*: Aşağıdaki kodu clientin içine yapıştırın
 ```
 RegisterNetEvent('esx_skin:karakterYukle')
 AddEventHandler('esx_skin:karakterYukle', function()
