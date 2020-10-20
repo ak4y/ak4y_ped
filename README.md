@@ -28,7 +28,9 @@ end)
 RegisterNetEvent('esx_skin:karakterYukle')
 AddEventHandler('esx_skin:karakterYukle', function()
 	ESX.TriggerServerCallback('esx_skin:getPlayerSkin', function(skin, jobSkin)
-		if skin ~= nil then
+		if skin == nil then
+			TriggerEvent('skinchanger:loadSkin', {sex = 0}, OpenSaveableMenu)
+		else
 			TriggerEvent('skinchanger:loadSkin', skin)
 		end
 	end)
