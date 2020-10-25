@@ -14,8 +14,8 @@ AddEventHandler('playerSpawned', function(spawn)
 	cd=true
 end)
 
-RegisterNetEvent("ak4y:loadPed")
-AddEventHandler("ak4y:loadPed", function(pedModel)
+RegisterNetEvent("ak4y:pedYukle")
+AddEventHandler("ak4y:pedYukle", function(pedModel)
     if pedModel ~= nil then
         local mhash = GetHashKey(pedModel)
 			while not HasModelLoaded(mhash) do
