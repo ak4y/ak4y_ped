@@ -30,13 +30,13 @@ AddEventHandler("ak4y:pedYukle", function(pedModel)
     end
 end)
 
-RegisterNetEvent("ak4y:loadDefault")
-AddEventHandler("ak4y:loadDefault", function()
+RegisterNetEvent("ak4y:pedSil")
+AddEventHandler("ak4y:pedSil", function()
 	TriggerEvent('esx_skin:karakterYukle')
 end)
 
-RegisterNetEvent("ak4y:setNewPed")
-AddEventHandler("ak4y:setNewPed", function(model)
+RegisterNetEvent("ak4y:yeniPed")
+AddEventHandler("ak4y:yeniPed", function(model)
 	TriggerServerEvent("ak4y:savePed", model)
 	Citizen.Wait(200)
 	TriggerServerEvent("ak4y:checkPed")
