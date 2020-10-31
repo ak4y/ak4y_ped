@@ -32,7 +32,9 @@ AddEventHandler('ak4y:checkPed', function()
 	local xPlayer = ESX.GetPlayerFromId(source)
 	local Identifier = xPlayer.getIdentifier()
 	MySQL.Async.fetchAll("SELECT ped FROM users WHERE identifier = @identifier", { ["@identifier"] = Identifier }, function(result)
-		if result[1].ped == "" or result[1].ped == nil then	else
+		if result[1].ped == "" or result[1].ped == nil then	
+			TriggerClientEvent("ak4y:pedSil", xPlayer.source)
+		else
 			TriggerClientEvent("ak4y:pedYukle", xPlayer.source, result[1].ped)
 		end
     end)
